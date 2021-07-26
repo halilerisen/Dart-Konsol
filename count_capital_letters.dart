@@ -1,11 +1,11 @@
 import 'dart:io';
 
 int countCapitalLetter(String text) {
-  //String içerisinde yer alan harflerin Asci Tablosundaki numaraları
+  //String içerisinde yer alan harflerin Ascii Tablosundaki numaraları
   List<int> listOfCodeUnits = text.codeUnits;
   int numberOfCapital = 0;
   for (var letter in listOfCodeUnits)
-    //Asci Tablosunda 65 = A, 90 =Z
+    //Ascii Tablosunda 65-90 arası Büyük Harfler (Türkçe Karakter Kullanmayın..!!)
     if (letter >= 65 && letter <= 90) numberOfCapital++;
 
   return numberOfCapital;
