@@ -1,19 +1,21 @@
 import 'dart:io';
 
+//Asal Sayıları Bulan Fonksiyon
 List<int> listOfPrimeFactor(int number) {
+  //Asal Çarpanlar Listesi
   List<int> listOfPrimeFactors = [];
+  //Hesaplamada kullanacağımız asal sayıları üretiyoruz.
   Set<int> listOfPrime = generatePrimeNumbers(number ~/ 2);
-  int numberCopy = number;
 
-  for (int i=0; i < listOfPrime.length; i++) {
-    if (numberCopy % listOfPrime.elementAt(i) == 0) {
+  for (int i = 0; i < listOfPrime.length; i++) {
+    //Eğer bölünürse asal çarpandır
+    if (number % listOfPrime.elementAt(i) == 0) {
       listOfPrimeFactors.add(listOfPrime.elementAt(i));
-      numberCopy = numberCopy ~/ listOfPrime.elementAt(i);
+      number = number ~/ listOfPrime.elementAt(i);
+      //Tekrar bölünüyor mu kontrol etmek için i--
       i--;
     }
-    
   }
-
   return listOfPrimeFactors;
 }
 
