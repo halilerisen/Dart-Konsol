@@ -22,7 +22,7 @@ List<int> listOfPrimeFactor(int number) {
 //Verilen Sayıya Kadar Asal Sayı Üreten Fonksiyon
 Set<int> generatePrimeNumbers(int number) {
   Set<int> primeNumbers = {};
-  for (int i = 2; i < number; i++) {
+  for (int i = 2; i <= number; i++) {
     //Her sayı Varsayılan Olarak Asal
     bool isPrime = true;
     //Bir sayının kendisinden sonra en büyük böleni yarısıdır.
