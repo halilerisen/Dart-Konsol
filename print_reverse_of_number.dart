@@ -1,5 +1,6 @@
+import 'dart:io';
 
-void reverseOfNumber(int number){
+void reverseOfNumber(int number) {
   String reverse = "";
 
   while (number >= 10) {
@@ -7,12 +8,13 @@ void reverseOfNumber(int number){
     number ~/= 10;
   }
 
-  print(reverse + number.toString());
-
+  print("Sayının Tersi : ${reverse + number.toString()}");
 }
 
 main(List<String> args) {
-  reverseOfNumber(456789);
+  stdout.write("Sayı Giriniz :");
+  int number = int.parse(stdin.readLineSync()!);
+  reverseOfNumber(number);
 }
 
 /*
