@@ -1,10 +1,9 @@
 import 'dart:io';
 
-int exponentiationCal(int num, int exponent){
+int exponentiationCal(int num, int exponent) {
   int result = 1;
   //Üst kadar sayıyı çarpma
-  for (var i = 0; i < exponent; i++) 
-    result *= num;
+  for (var i = 0; i < exponent; i++) result *= num;
 
   return result;
 }
