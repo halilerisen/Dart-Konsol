@@ -1,6 +1,18 @@
 import 'dart:io';
-
 import 'dart:math';
+
+/**
+ * Konsoldan matris satır ve sütun uzunluğu alınıcak
+ * Girilen uzunluklarda 2 tane matris oluşturulacak
+ * Oluşturulan matrislere 1-10 arası rastgele elemanlar atanılacak
+ * 2 Matris Toplamını
+ * 2 Matris Çarpımını 
+ * 2 Matrisin En Büyük Elemanlarının Yerini(satır, sütun)
+ * ve 2 matrisin Transpozunu alan Konsol Uygulaması
+ * 
+ * 
+ * Not : satır ve sütun sayısı eşit olmayan matrisler çarpılamaz..!!
+ */
 
 //Matris Yazdırma
 void printMatrix(List<List> matrix, [String title = ""]) {
